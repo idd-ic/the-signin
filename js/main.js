@@ -3,7 +3,7 @@ let signInPg= document.querySelector(`.modal`);
 let closeBtn= document.querySelector(`.close`);
 let submitBtn= document.querySelector(`#submit`);
 let userField= document.querySelector(`#user`);
-let passfield= document.querySelector(`#pass`);
+let passField= document.querySelector(`#pass`);
 //let inputErr= document.querySelectorAll(`#field`);
 
 
@@ -22,4 +22,5 @@ closeBtn.addEventListener(`click`, (event) =>
 submitBtn.addEventListener(`click`, (event) =>
 {
     userField.classList.add(`error`);
+    passField.classList.add(`error`);
 })
