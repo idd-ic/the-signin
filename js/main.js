@@ -1,26 +1,37 @@
-let signIn= document.querySelector(`.signin`);
-let signInPg= document.querySelector(`.modal`);
-let closeBtn= document.querySelector(`.close`);
-let submitBtn= document.querySelector(`#submit`);
-let userField= document.querySelector(`#user`);
-let passField= document.querySelector(`#pass`);
-//let inputErr= document.querySelectorAll(`#field`);
+let $signin= document.querySelector('.signin')
+let $modal= document.querySelector('.modal')
+let $close= document.querySelector('.close')
+let $submit= document.querySelector('#submit')
+let $user= document.querySelector('#user')
+let $pass= document.querySelector('#pass')
+let $form= document.querySelector('.getstarted')
 
 
-signIn.addEventListener(`click`, (event) =>
+$signin.addEventListener(`click`, (event) =>
 {
-    signInPg.style.display="block";
+    $modal.style.display=`block`
 })
 
 
-closeBtn.addEventListener(`click`, (event) =>
+$modal.addEventListener(`click`, (event) =>
 {
-    signInPg.style.display="none";
+    $modal.style.display=`none`
+})
+$user.addEventListener('focus', event => {
+    $user.classList.remove(`error`)
+})
+$pass.addEventListener('focus', event => {
+    $pass.classList.remove(`error`)
 })
 
+$form.addEventListener('submit', event => {
+    event.preventDefault()
 
-submitBtn.addEventListener(`click`, (event) =>
-{
-    userField.classList.add(`error`);
-    passField.classList.add(`error`);
+    $user.classList.add(`error`)
+    $pass.classList.add(`error`)
 })
+
+//if ($user.value("")) {
+  //     $user.classList.add(`error`)
+ //   }
+//)
