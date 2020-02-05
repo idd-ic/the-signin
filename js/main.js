@@ -11,8 +11,6 @@ $signin.addEventListener(`click`, (event) =>
 {
     $modal.style.display=`block`
 })
-
-
 $modal.addEventListener(`click`, (event) =>
 {
     $modal.style.display=`none`
@@ -23,7 +21,6 @@ $user.addEventListener('focus', event => {
 $pass.addEventListener('focus', event => {
     $pass.classList.remove(`error`)
 })
-
 $form.addEventListener('submit', event => {
     event.preventDefault()
 
